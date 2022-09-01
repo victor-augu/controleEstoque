@@ -40,14 +40,15 @@ public class TelaLogin extends javax.swing.JFrame {
         setTitle("Sistema de Estoque");
         getContentPane().setLayout(null);
 
-        bntEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icons8-tecla-enter-40.png"))); // NOI18N
+        bntEntrar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        bntEntrar.setText("ENTRAR");
         bntEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bntEntrarActionPerformed(evt);
             }
         });
         getContentPane().add(bntEntrar);
-        bntEntrar.setBounds(230, 150, 60, 60);
+        bntEntrar.setBounds(230, 150, 90, 60);
 
         txtLogin.setText("Usuario");
         getContentPane().add(txtLogin);
@@ -66,10 +67,10 @@ public class TelaLogin extends javax.swing.JFrame {
         getContentPane().add(bntSair);
         bntSair.setBounds(50, 210, 80, 50);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/fundoazul.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/download.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 760, 370);
+        jLabel1.setBounds(0, -10, 760, 390);
 
         setSize(new java.awt.Dimension(776, 410));
         setLocationRelativeTo(null);

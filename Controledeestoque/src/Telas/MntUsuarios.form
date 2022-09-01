@@ -28,7 +28,11 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jTabbedPane1" pref="873" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -57,7 +61,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane1" pref="868" max="32767" attributes="0"/>
+                          <Component id="jScrollPane1" pref="848" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="textinho" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -193,7 +197,7 @@
             <Component class="javax.swing.JButton" name="jButton2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Aluno\Documents\NetBeansProjects\Controledeestoque\src\Imagens\icons8-l&#xe1;pis-40.png"/>
+                  <Image iconType="3" name="/Imagens/icons8-l&#xe1;pis-40.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -203,7 +207,7 @@
             <Component class="javax.swing.JButton" name="jButton4">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Aluno\Documents\NetBeansProjects\Controledeestoque\src\Imagens\icons8-excluir-40.png"/>
+                  <Image iconType="3" name="/Imagens/icons8-excluir-40.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -213,7 +217,7 @@
             <Component class="javax.swing.JButton" name="jButton7">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Aluno\Documents\NetBeansProjects\Controledeestoque\src\Imagens\icons8-sair-40.png"/>
+                  <Image iconType="3" name="/Imagens/icons8-sair-40.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -298,7 +302,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="438" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="414" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -396,7 +400,7 @@
             <Component class="javax.swing.JButton" name="jButton6">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Aluno\Documents\NetBeansProjects\Controledeestoque\src\Imagens\icons8-sair-40.png"/>
+                  <Image iconType="3" name="/Imagens/icons8-sair-40.png"/>
                 </Property>
               </Properties>
             </Component>
