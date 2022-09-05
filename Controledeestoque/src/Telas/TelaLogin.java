@@ -7,6 +7,7 @@ package Telas;
 
 import Implementacao.UsuarioImpl;
 import Classes.Usuario;
+import javax.swing.JFrame;
 
 /**
  *
@@ -19,6 +20,7 @@ public class TelaLogin extends javax.swing.JFrame {
      */
     public TelaLogin() {
         initComponents();
+        setUndecorated(true);
     }
 
     /**
@@ -69,10 +71,11 @@ public class TelaLogin extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/download.png"))); // NOI18N
         jLabel1.setText("jLabel1");
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, -10, 760, 390);
+        jLabel1.setBounds(0, -20, 920, 490);
 
-        setSize(new java.awt.Dimension(776, 410));
+        setSize(new java.awt.Dimension(785, 410));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
