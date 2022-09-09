@@ -196,14 +196,14 @@ public class UsuarioImpl {
         
          Integer idUsu = 0;
          try {
-            String sql = "SELECT idusuario FROM usuarios WHERE idusuario = ?";
+            String sql = "SELECT idusuarios FROM usuarios WHERE idusuarios = ?";
             PreparedStatement pst = (PreparedStatement) conexao.conexao.prepareStatement(sql);
             pst.setInt(1, usuario.getIdUsuario());
 
             rst = pst.executeQuery();
 
             while (rst.next()) {
-                Integer auxIdusuario = rst.getInt("idusuario");
+                Integer auxIdusuario = rst.getInt("idusuarios");
                 if (auxIdusuario.equals(0)) {
                     idUsu = auxIdusuario;
                 } else {
@@ -212,7 +212,7 @@ public class UsuarioImpl {
             }
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro ao consultar se o idUsuario. " + ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Erro ao consultar se o idusuarios. " + ex.getMessage());
             return;
         }
 
@@ -231,7 +231,7 @@ public class UsuarioImpl {
                         + "           situacao = ?, "
                         + "           dataativacao = ?, "
                         + "           datadesativacao = ? "
-                        + " WHERE idusuario = ?";
+                        + " WHERE idusuarios = ?";
 
                 SimpleDateFormat formatoTexto = new SimpleDateFormat("yyyy-MM-dd");
                 String dataAniversario = formatoTexto.format(usuario.getDataAtivacao());
