@@ -7,18 +7,22 @@ package Telas;
 
 import Classes.Produto;
 import Implementacao.ProdutoImpl;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Aluno
  */
-public class mnroduto extends javax.swing.JFrame {
+public class mntProduto extends javax.swing.JFrame {
 
     /**
      * Creates new form mnroduto
      */
-    public mnroduto() {
+    public mntProduto() {
         initComponents();
+        ProdutoImpl produtoImpl = new ProdutoImpl();
+        produtoImpl.popularTabela(jTable1);
     }
 
     /**
@@ -54,13 +58,13 @@ public class mnroduto extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Codigo usuario", "nome ", "data de nacimento", "login", "senha", "situação", "dt . atividade", "dt desitivação"
+                "Codigo do produto", "Descrição ", "Preço"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -275,16 +279,16 @@ public class mnroduto extends javax.swing.JFrame {
 
     private void pesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisaActionPerformed
         // TODO add your handling code here:
-        /*Usuario usuario = new Usuario();
-        UsuarioImpl usuarioImpl = new UsuarioImpl();
+        Produto produto = new Produto();
+        ProdutoImpl produtoImpl = new ProdutoImpl();
 
         if (textinho.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Digite um nome para pesquisar!");
             return;
         }
 
-        usuario.setNome(textinho.getText());
-        usuarioImpl.pesquisarTabela(jTable1, usuario);*/
+        produto.setDescricao(textinho.getText());
+        produtoImpl.pesquisarTabela(jTable1, produto);
     }//GEN-LAST:event_pesquisaActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -331,8 +335,8 @@ public class mnroduto extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-
-        /*DefaultTableModel tabelaUsuario = (DefaultTableModel) jTable1.getModel();
+       
+        DefaultTableModel tabelaUsuario = (DefaultTableModel) jTable1.getModel();
         int row = jTable1.getSelectedRow();
 
         String ValorSelecionado = "";
@@ -344,13 +348,13 @@ public class mnroduto extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Selecione um usuário para excluir!");
             return;
         } else {
-            Usuario usuario = new Usuario();
-            usuario.setIdUsuario(Integer.parseInt(ValorSelecionado));
-
-            UsuarioImpl usuarioImpl = new UsuarioImpl();
-            usuarioImpl.excluirUsuario(usuario);
-            usuarioImpl.popularTabela(jTable1);
-        }*/
+            Produto produto  = new Produto ();
+            produto .setCodProduto (Integer.parseInt(ValorSelecionado));
+            
+            ProdutoImpl produtoImpl = new ProdutoImpl();
+           produtoImpl.excluirProduto(produto);
+           produtoImpl.popularTabela(jTable1);
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -390,7 +394,7 @@ public class mnroduto extends javax.swing.JFrame {
         
         ProdutoImpl produtoImpl = new ProdutoImpl();
         produtoImpl.inserirProduto(produto);
-       // produtoImpl.popularTabela(jTable1);
+        produtoImpl.popularTabela(jTable1);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -403,7 +407,7 @@ public class mnroduto extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        
+        System.exit(0);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
@@ -423,20 +427,21 @@ public class mnroduto extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(mnroduto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mntProduto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(mnroduto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mntProduto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(mnroduto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mntProduto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(mnroduto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mntProduto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new mnroduto().setVisible(true);
+                new mntProduto().setVisible(true);
             }
         });
     }
